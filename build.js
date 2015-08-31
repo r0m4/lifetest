@@ -12,8 +12,11 @@ compiler.run(function (err, stats) {
     console.log(stats.toJson()); // по завершению, выводим всю статистику
 });
 
+module.exports = {
 plugins: [
         DefinePlugin({
             'NODE_ENV': JSON.stringify('production')
         }),
         ]
+
+    };
